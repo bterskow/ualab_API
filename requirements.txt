@@ -1,0 +1,8 @@
+fastapi==0.100.0
+uvicorn==0.23.1
+boto3==1.28.9
+botocore==1.31.9
+liqpay-sdk-python3==1.0.6
+itsdangerous==2.1.2
+python-multipart==0.0.6
+loguru==0.7.2
