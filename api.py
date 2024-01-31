@@ -44,7 +44,7 @@ class Model:
 			key = dynamodb_client.get_item(TableName=dynamodb_table_name, Key={'secret_key': {'S': secret_key}})
 
 			if 'Item' in key.keys():
-				return self.create_user_secret_key()
+				return self.register()
 
 			created_at = round(time() * 1000)
 
@@ -52,7 +52,7 @@ class Model:
 
 			return {'status': 200, 'message': None, 'user': {'secret_key': secret_key, 'subscription': 'false', 'created_at': str(created_at), 'links': json.dumps({'links': []})}}
 		except Exception as e:
-			return {'status': 500, 'message': str(e), 'secret_key': None}
+			return {'status': 500, 'message': str(e), 'user': None}
 
 
 	def auth(self, secret_key):

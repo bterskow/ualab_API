@@ -1,6 +1,5 @@
 import os
 
-
 class ENV:
 	def data(self):
 		return {

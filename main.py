@@ -8,7 +8,6 @@ import uvicorn
 
 
 app = FastAPI()
-app.add_middleware(SessionMiddleware, secret_key='application')
 app.add_middleware(CORSMiddleware, allow_headers=['*'], allow_methods=['*'], allow_origins=['*'])
 model = Model()
 
