@@ -190,7 +190,7 @@ class Model:
 				"version"   : "3",
 				"email"     : smtp_account,
 				"amount"    : "7",
-				"description": f"elbo.live: infnity subscription. Buyer: {secret_key}",
+				"description": f"in.ualab.online: infnity subscription. Buyer: {secret_key}",
 				"currency"  : "USD",
 				"order_id"  : order_id,
 				"server_url": server_url,
