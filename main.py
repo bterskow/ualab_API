@@ -14,8 +14,8 @@ model = Model()
 
 @app.get('/', name='default_api_page')
 def default():
-	return RedirectResponse('/docs')
-
+	html = f"<div style='height: 100%; display: flex; align-items: center; justify-content: center; font-size: 25px; font-weight: bold;'><p>Error 404. Page not found!</p></div>"
+	return HTMLResponse(html)
 
 @app.get('/register/proccessing', name='register')
 def register():
